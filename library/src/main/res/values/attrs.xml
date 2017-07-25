@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SquareLayout">
+        <attr name="match" format="enum">
+            <enum name="width" value="0"/>
+            <enum name="height" value="1" />
+            <enum name="length" value="2" />
+        </attr>
+        <attr name="length" format="dimension" />
+    </declare-styleable>
+</resources>

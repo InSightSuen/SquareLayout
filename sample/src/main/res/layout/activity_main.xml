@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context="com.insightsuen.squarelayout.sample.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            android:text="SquareRelativeLayout: match width"/>
+
+        <com.insightsuen.squarelayout.SquareRelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ddd"
+            android:clickable="true"
+            android:onClick="changeMatchType"
+            android:padding="16dp"
+            app:match="width">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="30dp"
+                android:background="#aaa"
+                android:gravity="center"
+                android:text="150dp x 120dp\nmargin top 30dp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:background="#777"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="wrap_content x 40dp\nmargin left 40dp"
+                android:textColor="#fff"/>
+
+        </com.insightsuen.squarelayout.SquareRelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="4dp"
+            android:text="SquareFrameLayout: match length 200dp"/>
+
+        <com.insightsuen.squarelayout.SquareFrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ddd"
+            android:clickable="true"
+            android:onClick="changeMatchType"
+            android:padding="16dp"
+            app:length="200dp"
+            app:match="length">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="30dp"
+                    android:background="#aaa"
+                    android:gravity="center"
+                    android:text="150dp x 120dp\nmargin top 30dp"
+                    android:textColor="#fff"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginStart="40dp"
+                    android:background="#777"
+                    android:gravity="center"
+                    android:padding="4dp"
+                    android:text="wrap_content x 40dp\nmargin left 40dp"
+                    android:textColor="#fff"/>
+
+            </RelativeLayout>
+
+        </com.insightsuen.squarelayout.SquareFrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="4dp"
+            android:text="SquareLinearLayout: match height"/>
+
+        <com.insightsuen.squarelayout.SquareLinearLayout
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="#ddd"
+            android:clickable="true"
+            android:onClick="changeMatchType"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:match="height">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="30dp"
+                android:background="#aaa"
+                android:gravity="center"
+                android:text="150dp x 120dp\nmargin top 30dp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginStart="40dp"
+                android:background="#777"
+                android:gravity="center"
+                android:padding="4dp"
+                android:text="wrap_content x 40dp\nmargin left 40dp"
+                android:textColor="#fff"/>
+
+        </com.insightsuen.squarelayout.SquareLinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
