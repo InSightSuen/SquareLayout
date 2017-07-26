@@ -57,18 +57,22 @@ public interface SquareLayout {
     @interface MatchType {}
 
     /**
-     * The view's length will match the width MeasureSpec, and ignore height MeasureSpec.
+     * The view's length will match the {@link android.view.ViewGroup.LayoutParams#width},
+     * and ignore height {@link android.view.ViewGroup.LayoutParams#height}.
      * It's the default {@link MatchType}.
      */
     int MATCH_WIDTH = 0;
 
     /**
-     * The view's length will match the height MeasureSpec, and ignore width MeasureSpec
+     * The view's length will match the {@link android.view.ViewGroup.LayoutParams#height},
+     * and ignore width MeasureSpec.
      */
     int MATCH_HEIGHT = 1;
 
     /**
-     * The view's length will be the specified length, and ignore either width or height MeasureSpec.
+     * The view's length will be the specified length, and ignore either
+     * {@link android.view.ViewGroup.LayoutParams#width} or
+     * {@link android.view.ViewGroup.LayoutParams#height}.
      */
     int MATCH_LENGTH = 2;
 
