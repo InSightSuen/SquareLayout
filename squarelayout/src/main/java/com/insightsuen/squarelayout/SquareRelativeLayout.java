@@ -19,29 +19,28 @@ package com.insightsuen.squarelayout;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.support.annotation.DimenRes;
-import android.support.annotation.Nullable;
 import android.support.annotation.Px;
 import android.util.AttributeSet;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 /**
- * A squared <code>LinearLayout</code>
+ * A squared <code>RelativeLayout</code>
  */
-public class SquareLinearLayout extends LinearLayout implements SquareLayout {
+public class SquareRelativeLayout extends RelativeLayout implements SquareLayout {
 
     private int mMatchType = MATCH_WIDTH;
 
     private int mLength;
 
-    public SquareLinearLayout(Context context) {
+    public SquareRelativeLayout(Context context) {
         this(context, null);
     }
 
-    public SquareLinearLayout(Context context, @Nullable AttributeSet attrs) {
+    public SquareRelativeLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SquareLinearLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public SquareRelativeLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray ta = getResources().obtainAttributes(attrs, R.styleable.SquareLayout);
         try {
@@ -79,7 +78,7 @@ public class SquareLinearLayout extends LinearLayout implements SquareLayout {
     }
 
     /**
-     * @param matchType the match type of <code><SquareLayout/code>
+     * @param matchType the match type of <code>SquareLayout</code>
      * @param length    the length px value or <code>MeasureSpec</code>
      */
     public void setMatchType(@MatchType int matchType, int length) {
