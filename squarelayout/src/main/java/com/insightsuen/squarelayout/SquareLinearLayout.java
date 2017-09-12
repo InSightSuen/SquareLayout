@@ -18,37 +18,30 @@ package com.insightsuen.squarelayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.support.annotation.AttrRes;
 import android.support.annotation.DimenRes;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.annotation.Px;
 import android.util.AttributeSet;
-import android.view.View;
-import android.widget.FrameLayout;
-
-import java.util.ArrayList;
+import android.widget.LinearLayout;
 
 /**
- * A squared <code>FrameLayout</code>
+ * A squared <code>LinearLayout</code>
  */
-public class SquareFrameLayout extends FrameLayout implements SquareLayout {
+public class SquareLinearLayout extends LinearLayout implements SquareLayout {
 
     private int mMatchType = MATCH_WIDTH;
 
     private int mLength;
 
-    private final ArrayList<View> mMathchParentChildren = new ArrayList<>(1);
-
-    public SquareFrameLayout(@NonNull Context context) {
+    public SquareLinearLayout(Context context) {
         this(context, null);
     }
 
-    public SquareFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs) {
+    public SquareLinearLayout(Context context, @Nullable AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SquareFrameLayout(@NonNull Context context, @Nullable AttributeSet attrs, @AttrRes int defStyleAttr) {
+    public SquareLinearLayout(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         TypedArray ta = getResources().obtainAttributes(attrs, R.styleable.SquareLayout);
         try {
@@ -86,7 +79,7 @@ public class SquareFrameLayout extends FrameLayout implements SquareLayout {
     }
 
     /**
-     * @param matchType the match type of <code><SquareLayout/code>
+     * @param matchType the match type of <code>SquareLayout</code>
      * @param length    the length px value or <code>MeasureSpec</code>
      */
     public void setMatchType(@MatchType int matchType, int length) {
